@@ -4,7 +4,6 @@ import MarkupItem from "@/components/MarkupItem";
 import Toolbar from "@/components/Toolbar";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { loadMarkups } from '@/slices/markupSlice'
 
 
