@@ -2,7 +2,7 @@
 
 import MarkupItem from "@/components/MarkupItem";
 import Toolbar from "@/components/Toolbar";
-import { useAppDispatch } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { loadMarkups } from '@/slices/markupSlice'
@@ -15,7 +15,7 @@ export default function Home() {
     dispatch(loadMarkups());
   }, []);
 
-  const markups = useSelector((state) => state.markup.markups)
+  const markups = useAppSelector((state) => state.markup.markups)
 
   return (
     <div className="min-h-screen bg-gray-50">
